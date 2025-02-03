@@ -1,0 +1,45 @@
+body {
+    background-color: black;
+    color: green;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    margin: 50px auto;
+    width: 80%;
+    padding: 20px;
+    border: 2px solid green;
+    border-radius: 10px;
+}
+
+h1, h2 {
+    text-shadow: 0 0 10px green;
+}
+
+.calculator {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: green;
+    color: black;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: limegreen;
+}
+
+.result {
+    margin-top: 20px;
+}
+
+.footer {
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: bold;
+}
