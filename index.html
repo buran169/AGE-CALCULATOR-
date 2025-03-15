@@ -1,70 +1,22 @@
 <!DOCTYPE html>
-<html lang="bn">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>জন্ম থেকে সময় গণনা</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AGE CALCULATOR</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <p class="credits">Made by Burhan</p>
-  </header>
-  <div class="container">
-    <h1 id="title">জন্ম থেকে সময় গণনা</h1>
-    <p id="subtitle">আপনার জন্ম তারিখ দিন:</p>
-    <input type="date" id="birthDate" />
-    <button id="calculateBtn">গণনা করুন</button>
-    <div id="result">
-      <!-- ফলাফল এখানে দেখাবে -->
+    <div class="container">
+        <h1>Age Calculator</h1>
+        <label for="dob">Enter your Date of Birth:</label>
+        <input type="date" id="dob">
+        <button onclick="calculateAge()">Calculate Age</button>
+        <div id="result" class="result"></div>
     </div>
-  </div>
-
-  <script>
-    // JSON ডেটা (অথবা config) যেটা কনফিগারেশন টেক্সট হিসেবে ব্যবহার হচ্ছে
-    const configData = {
-      "title": "জন্ম থেকে সময় গণনা",
-      "subtitle": "আপনার জন্ম তারিখ দিন:",
-      "buttonText": "গণনা করুন"
-    };
-
-    // কনফিগারেশন অনুযায়ী টেক্সট সেট করা
-    document.getElementById('title').innerText = configData.title;
-    document.getElementById('subtitle').innerText = configData.subtitle;
-    document.getElementById('calculateBtn').innerText = configData.buttonText;
-
-    // সময় গণনার ফাংশন
-    function calculateTime() {
-      const birthDateInput = document.getElementById('birthDate').value;
-      if (!birthDateInput) {
-        alert("অনুগ্রহ করে আপনার জন্ম তারিখ দিন।");
-        return;
-      }
-      const birthDate = new Date(birthDateInput);
-      const now = new Date();
-      const diffMilliseconds = now - birthDate;
-
-      // বিভিন্ন সময় ইউনিটে রূপান্তর
-      const diffSeconds = Math.floor(diffMilliseconds / 1000);
-      const diffMinutes = Math.floor(diffSeconds / 60);
-      const diffHours = Math.floor(diffMinutes / 60);
-      const diffDays = Math.floor(diffHours / 24);
-
-      // ফলাফল প্রদর্শন
-      const resultDiv = document.getElementById('result');
-      resultDiv.innerHTML = `
-        <p>আপনি জন্ম থেকে এখন পর্যন্ত:</p>
-        <ul>
-          <li>${diffDays} দিন</li>
-          <li>${diffHours} ঘণ্টা</li>
-          <li>${diffMinutes} মিনিট</li>
-          <li>${diffSeconds} সেকেন্ড</li>
-        </ul>
-      `;
-    }
-
-    document.getElementById('calculateBtn').addEventListener('click', calculateTime);
-  </script>
+    <footer>
+        <p>Made by <a href="https://www.facebook.com/bullavaii01" target="_blank">Burhan</a></p>
+    </footer>
+<script src="script.js"></script>
 </body>
-  </html>
-  
+</html>
