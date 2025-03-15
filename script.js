@@ -1,6 +1,6 @@
 function calculateAge() {
     const dobInput = document.getElementById('dob').value;
-    
+
     if (!dobInput) {
         alert("Please select your date of birth.");
         return;
@@ -19,12 +19,12 @@ function calculateAge() {
     const seconds = Math.floor(diff / 1000);
 
     document.getElementById('result').innerHTML = `
-        <p><strong>Years:</strong> ${Years}</p>
-        <p><strong>Months:</strong> ${Months}</p>
-        <p><strong>Days:</strong> ${Days}</p>
-        <p><strong>Weeks:</strong> ${Weeks}</p>
-        <p><strong>Hours:</strong> ${Hours}</p>
-        <p><strong>Minutes:</strong> ${Minutes}</p>
-        <p><strong>Seconds:</strong> ${Seconds}</p>
+        <p>↪️ <strong>Years:</strong> ${years}</p>
+        <p>↪️ <strong>Months:</strong> ${months}</p>
+        <p>↪️ <strong>Days:</strong> ${days}</p>
+        <p>↪️ <strong>Weeks:</strong> ${weeks}</p>
+        <p>↪️ <strong>Hours:</strong> ${hours}</p>
+        <p>↪️ <strong>Minutes:</strong> ${minutes}</p>
+        <p>↪️ <strong>Seconds:</strong> ${seconds}</p>
     `;
 }
